@@ -27,5 +27,8 @@ Drawing.prototype.paint = function(ctx) {
 		eltDuTableau.paint(ctx);
 	});
 };
-
+Drawing.prototype.updateShapeList = function(form){
+	  //Récupération de l'élément shapelist
+    var myShapeList = document.getElementById('shapeList');
+}
 

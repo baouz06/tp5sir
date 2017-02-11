@@ -14,26 +14,26 @@ function DnD(canvas, interactor) {
 		
 			this.cordinitx = getMousePosition(canvas,evt).x;
 			this.cordinity= getMousePosition(canvas,evt).y;
-			console.log("presser");
-			console.log(this.cordinitx);
-			console.log(this.cordinity);
+//			console.log("presser");
+//			console.log(this.cordinitx);
+//			console.log(this.cordinity);
 		
 	}.bind(this);
 
 	this.maFctGerantLeDeplacement = function(evt) {
 		this.cordinitx = getMousePosition(canvas,evt).x;
 		this.cordinity= getMousePosition(canvas,evt).y;
-        console.log("deplacement");		
-        console.log(this.cordinitx);
-		console.log(this.cordinity);
+//        console.log("deplacement");		
+//        console.log(this.cordinitx);
+//		console.log(this.cordinity);
 	}.bind(this);
 
 	this.maFctGerantLeRelachement = function(evt) {
 		this.cordinitx = getMousePosition(canvas,evt).x;
 		this.cordinity= getMousePosition(canvas,evt).y;
-        console.log("relachement");		
-        console.log(this.cordinitx);
-		console.log(this.cordinity);
+//        console.log("relachement");		
+//        console.log(this.cordinitx);
+//		console.log(this.cordinity);
 	}.bind(this);
 
 	// Associer les fonctions précédentes aux évènements du canvas.
