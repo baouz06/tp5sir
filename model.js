@@ -10,6 +10,9 @@ function Drawing() {
     this.removeForm = function(index) {
         this.forms.splice(index,1);
     };
+    this.getForms = function(){
+    	return forms;
+    }
 };
 
 //Classe Form
