@@ -1,13 +1,13 @@
 # TP 5 de Systèmes d'informations répartis
 
-## Objective
+## Objectif
 
-1. Construire à la main une application Web suffisament complexe pour nécessiter la mise en place d’un MVC côté client
+1. Construire une application Web en utilisant le principe MVC avec JavaScript 
 2. Voir l’intérêt d’un framework comme AngularJS par la suite.  
 
 ## La réalisation de TP
 
-L’objectif de ce TP consiste à créer une application Web pour faire du dessin vectoriel, i.e. pour dessiner des rectangles, des lignes, ainsi que définir leur couleur et leur épaisseur de trait. La figure ci-dessous montre l’état de l’application et donc l’objectif à atteindre.
+L’objectif de ce TP consiste à créer une application Web pour faire un dessin vectoriel:dessiner des rectangles, des lignes avec leurs couleurs et épaisseurs. La figure ci-dessous montre l’état de l’application et donc l’objectif à atteindre.
 
 ![model3](https://cloud.githubusercontent.com/assets/15005875/25064216/1549a5b4-21f6-11e7-81ef-6a2db26452e7.png)
 
@@ -48,13 +48,13 @@ this.maFctGerantLaPression = function(evt) {
   .
   .
 ```
-3. Nous avons fait enregistrement de  chaque fonction auprès du canvas                                                           
+3. Nous avons liés ces fonctions à des evenements(listener)                                                          
 ```
 canvas.addEventListener('mousedown', this.maFctGerantLaPression, false);
 canvas.addEventListener('mouseup', this.maFctGerantLeRelachement, false);
 canvas.addEventListener('mousemove',this.maFctGerantLeDeplacement, false);	
 ```
-4. On a appelé dans chacune des 3 fonctions console.log pour afficher dans la console Javascript de notre navigateur les coordonnées de chaque événement lors de l'exécution de l'interaction.                                                                                    
+4. On a appelé dans chacune de ces 3 fonctions console.log pour afficher dans la console Javascript de notre navigateur les coordonnées de chaque événement lors de l'exécution de l'interaction.                                                                                    
 
 Example :  
 ```
@@ -80,7 +80,7 @@ function Form(epaisseur, couleur) {
 
 Un rectangle possède des coordonnées de son point haut-gauche, une largeur et une hauteur. 
 ```
-function Rectangle(X, Y, largeur, hauteur, epaisseur, couleur) {
+function RectangleY(X, , largeur, hauteur, epaisseur, couleur) {
     Form.call(this, epaisseur, couleur);
     this.X=X;
     this.Y=Y;
@@ -217,13 +217,6 @@ drawing.paint(ctx);
 this.currentShape.paint(ctx);
 ```
 
-4. La création des booutons 
-```
-var butRect = document.getElementById('butRect');
-var butLine = document.getElementById('butLine');
-var spinnerWidth = document.getElementById('spinnerWidth');
-var colour = document.getElementById('colour');
-```
 ## Liste des modifications
 
 1. Nous avons rajouté la fonction "updateShapeList" dans le fichier de view.js 
